@@ -101,7 +101,7 @@ header {
     }
 
     nav a {
-        font-size: 10px; /* Make text smaller */
+        font-size: 0.5px; /* Make text smaller */
         padding: 5px 10px; /* Add space inside each button */
         margin: 10px 15px; /* Add spacing between buttons */
         width: 20%; /* Adjust button width */
