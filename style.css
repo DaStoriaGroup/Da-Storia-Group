@@ -67,36 +67,37 @@ header {
 
 @media screen and (max-width: 768px) {
     .slide-in-text {
-        font-size: 1.5rem; /* Make the text smaller on mobile */
-        position: absolute; /* Position it absolutely */
-        left: 50%; /* Center horizontally */
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        position: absolute; /* Make sure it's positioned absolutely */
         top: 50%; /* Center vertically */
-        transform: translate(-50%, -50%) translateX(100%); /* Adjust position and make it slide in */
-        animation: slideLoopMobile 7s ease-in-out infinite; /* Adjust animation speed */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%) translateX(100%); /* Start off-screen */
+        animation: slideLoopMobile 7s ease-in-out infinite; /* Adjusted animation duration */
     }
 
     @keyframes slideLoopMobile {
         0% {
-            transform: translateX(100%); /* Start off-screen */
+            transform: translate(-50%, -50%) translateX(100%); /* Start off-screen */
             opacity: 0;
         }
         30% {
-            transform: translateX(0); /* Move to the center */
+            transform: translate(-50%, -50%) translateX(0); /* Move to the center */
             opacity: 1;
         }
         50% {
-            transform: translateX(0); /* Stay centered */
+            transform: translate(-50%, -50%) translateX(0); /* Stay centered */
             opacity: 1;
         }
         70% {
-            transform: translateX(0); /* Stay centered */
+            transform: translate(-50%, -50%) translateX(0); /* Stay centered */
             opacity: 1;
         }
         100% {
-            transform: translateX(-100%); /* Slide off-screen */
+            transform: translate(-50%, -50%) translateX(-100%); /* Slide off-screen */
             opacity: 0;
         }
     }
+
 
     nav {
         flex-direction: column; /* Stack menu items vertically */
