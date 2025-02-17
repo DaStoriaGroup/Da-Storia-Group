@@ -25,7 +25,7 @@ header {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-  }
+}
 
 .slide-in-text {
     display: inline-block;
@@ -62,17 +62,17 @@ header {
     100% {
         transform: translateX(100%);
         opacity: 0; 
+    }
 }
 
 @media screen and (max-width: 768px) {
     .slide-in-text {
         font-size: 1.5rem; /* Adjust font size for mobile */
-        animation-duration: 7s; /* Adjust speed */
-        transform: translateX(100%); /* Start off-screen on mobile too */
+        animation: slideLoopMobile 7s ease-in-out infinite; /* Adjust speed */
+        transform: translateX(100%); /* Start off-screen on mobile */
     }
 
-    /* Adjust the keyframes for mobile */
-    @keyframes slideLoop {
+    @keyframes slideLoopMobile {
         0% {
             transform: translateX(100%); /* Start off-screen */
             opacity: 0;
@@ -94,14 +94,25 @@ header {
             opacity: 0;
         }
     }
-}
+
+    nav {
+        flex-direction: column; /* Stack menu items vertically */
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 10px; /* Make text smaller */
+        padding: 5px 10px; /* Add space inside each button */
+        margin: 10px 15px; /* Add spacing between buttons */
+        width: 20%; /* Adjust button width */
+    }
 }
 
 .header-box {
     width: 100%; 
     height: 200px; 
     padding: 250px 20px;
-    background-image: url('header.jpg');
+    background-image:url('header.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +130,7 @@ header {
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
+
 @keyframes moveImage {
     from {
         transform: translateX(-10px);
@@ -144,7 +156,6 @@ header {
 
 nav {
     background-color:none;
-
     text-align: center;
     padding: 15px 0;
     position: fixed;
@@ -242,28 +253,6 @@ body {
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack menu items vertically */
-        text-align: center;
-    }
-
-    nav a {
-        font-size: 8px; /* Make text smaller */
-        padding: 8px 12px; /* Add space inside each button */
-        margin: 10px 15px; /* Add spacing between buttons */
-        width: 20%; /* Reduce button width */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    nav a {
-        padding: 10px 15px; /* Reduce button padding */
-        border-radius: 25px; /* Make buttons rounder */
-        opacity: 0.8; /* Reduce opacity */
     }
 }
 
