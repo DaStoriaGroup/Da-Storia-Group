@@ -67,9 +67,12 @@ header {
 
 @media screen and (max-width: 768px) {
     .slide-in-text {
-        font-size: 1.5rem; /* Adjust font size for mobile */
-        animation: slideLoopMobile 7s ease-in-out infinite; /* Adjust speed */
-        transform: translateX(100%); /* Start off-screen on mobile */
+        font-size: 1.5rem; /* Make the text smaller on mobile */
+        position: absolute; /* Position it absolutely */
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%) translateX(100%); /* Adjust position and make it slide in */
+        animation: slideLoopMobile 7s ease-in-out infinite; /* Adjust animation speed */
     }
 
     @keyframes slideLoopMobile {
@@ -101,7 +104,7 @@ header {
     }
 
     nav a {
-        font-size: 0.5px; /* Make text smaller */
+        font-size: 10px; /* Make text smaller */
         padding: 5px 10px; /* Add space inside each button */
         margin: 10px 15px; /* Add spacing between buttons */
         width: 20%; /* Adjust button width */
