@@ -67,7 +67,7 @@ header {
 
 @media screen and (max-width: 768px) {
     .slide-in-text {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+        font-size: 0.8rem; /* Smaller font size for mobile */
         position: absolute; /* Make sure it's positioned absolutely */
         top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
