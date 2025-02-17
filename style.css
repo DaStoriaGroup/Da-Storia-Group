@@ -33,7 +33,7 @@ header {
     color: white;
     white-space: nowrap;
     opacity: 0;
-    font-family: 'Dancing Sript', sans-serif;
+    font-family: 'Dancing Script', sans-serif;
     transform: translateX(100%); 
     animation: slideLoop 10s ease-in-out infinite;
 }
@@ -62,6 +62,38 @@ header {
     100% {
         transform: translateX(100%);
         opacity: 0; 
+}
+
+@media screen and (max-width: 768px) {
+    .slide-in-text {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+        animation-duration: 7s; /* Adjust speed */
+        transform: translateX(100%); /* Start off-screen on mobile too */
+    }
+
+    /* Adjust the keyframes for mobile */
+    @keyframes slideLoop {
+        0% {
+            transform: translateX(100%); /* Start off-screen */
+            opacity: 0;
+        }
+        30% {
+            transform: translateX(0); /* Move to the center */
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(0); /* Stay centered */
+            opacity: 1;
+        }
+        70% {
+            transform: translateX(0); /* Stay centered */
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-100%); /* Slide off-screen */
+            opacity: 0;
+        }
+    }
 }
 }
 
@@ -196,6 +228,43 @@ nav {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
     pointer-events: none;
     animation: fadeInMenu 0.5s ease-in-out forwards;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack menu items vertically */
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 8px; /* Make text smaller */
+        padding: 8px 12px; /* Add space inside each button */
+        margin: 10px 15px; /* Add spacing between buttons */
+        width: 20%; /* Reduce button width */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        padding: 10px 15px; /* Reduce button padding */
+        border-radius: 25px; /* Make buttons rounder */
+        opacity: 0.8; /* Reduce opacity */
+    }
 }
 
 footer {
